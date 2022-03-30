@@ -1,0 +1,30 @@
+<div class="container pt-5">
+<div class="mt-5">
+    <h1>Agregar nuevo libro</h1>
+    <p>
+        En esta seccion encontraras la posibilidad de agregar nuevos libros
+    </p>
+    <p>
+        Cada libro debe tener nombre, autor, editorial y genero, de otra manera no se podra agregar el libro
+    </p>
+</div>
+<form class="mt-5" [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Nombre</label>
+        <input class="form-control" formControlName="name">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Autor</label>
+        <input class="form-control" formControlName="author">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Editorial</label>
+        <input  class="form-control" formControlName="publisher">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Genero</label>
+        <input class="form-control" formControlName="genre">
+      </div>
+      <button class="btn btn-primary "[disabled]="myForm.invalid">Guardar</button>
+  </form>
+</div>

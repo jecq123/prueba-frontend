@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <h1 class="pt-5">Se listaran los libros que hay, tambien se filtaran por editorial y por autor</h1>
+    <div class="row mt-5">
+        <div class="col-6 col-lg-auto">
+            <label for="">Editorial</label>
+            <input type="text" class="ms-2" #publisher>
+            <button (click)="findByPublisher(publisher.value)" class="btn btn-primary ms-2">Buscar</button>
+        </div>
+        <div class="col-6 col-lg-auto">
+            <label for="">Autor</label>
+            <input type="text" class="ms-2" #author>
+            <button (click)="findByAuthor(author.value)" class="btn btn-primary ms-2" >Buscar</button>
+        </div>
+    </div>
+    <table class="table mt-5">
+        <thead class="table-light">
+            <th scope="col">isbn</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Editorial</th>
+            <th scope="col">Genero</th>
+            <th></th>
+        </thead> 
+        <tbody *ngFor="let book of books">
+          <td>{{book.isbn}}</td>
+          <td>{{book.name}}</td>
+          <td>{{book.author}}</td>
+          <td>{{book.publisher}}</td>
+          <td>{{book.genre}}</td>
+          <td><button (click)="deleteByIsbn(book)" class="btn border-danger">eliminar</button></td>
+        </tbody>
+      </table>
+</div>

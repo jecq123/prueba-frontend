@@ -1,0 +1,18 @@
+.background
+{
+    background-image: url('../../assets/images/libreria.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    height: 70vh;
+}
+
+h2
+{
+    color: black;
+    font-size: x-large;
+    font-weight: 900;
+}
